@@ -28,7 +28,7 @@ class LandingPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(
                   top:
-                      500.0), // Mengatur padding atas agar konten agak ke bawah
+                      450.0), // Mengatur padding atas agar konten agak ke bawah
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start, // Teks di kiri
                 children: [
@@ -39,20 +39,20 @@ class LandingPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Hello!',
+                          'Assalamualaikum,',
                           style: TextStyle(
                             fontFamily: 'Inter',
-                            fontSize: 32.0,
+                            fontSize: 26.0,
                             fontWeight: FontWeight.bold,
-                            color: Color(
-                                0xFF6C806A), // Warna teks hijau sesuai gambar
+                            color: Color.fromRGBO(150, 124, 85,
+                                100), // Warna teks hijau sesuai gambar
                           ),
                         ),
                         SizedBox(
                             height:
                                 4), // Mengurangi jarak antara teks "Hello!" dan "Let's get started."
                         Text(
-                          "Let's get started.",
+                          "Selamat Datang di, aplikasi Masjid Salman ITB",
                           style: TextStyle(
                             fontFamily: 'Inter',
                             fontSize: 18.0,
@@ -75,8 +75,8 @@ class LandingPage extends StatelessWidget {
                               Navigator.pushNamed(context, '/login');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(
-                                  0xFF6C806A), // Warna hijau sesuai gambar
+                              backgroundColor: Color.fromRGBO(150, 124, 85,
+                                  100), // Warna hijau sesuai gambar
                               padding: EdgeInsets.symmetric(
                                   vertical: 15), // Mengatur tinggi tombol
                               shape: RoundedRectangleBorder(
@@ -84,7 +84,7 @@ class LandingPage extends StatelessWidget {
                               ),
                             ),
                             child: Text(
-                              'Sign in',
+                              'Masuk',
                               style: TextStyle(
                                 fontFamily: 'Inter',
                                 fontSize: 18.0,
@@ -104,24 +104,24 @@ class LandingPage extends StatelessWidget {
                               Navigator.pushNamed(context, '/register');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  Color(0xFFF0C8C4), // Warna pink sesuai gambar
+                              backgroundColor: Color.fromARGB(255, 255, 255,
+                                  255), // Warna pink sesuai gambar
                               padding: EdgeInsets.symmetric(
                                   vertical: 15), // Mengatur tinggi tombol
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 side: BorderSide(
-                                    color: Color(
-                                        0xFF6C806A)), // Warna border hijau
+                                  color: Color.fromRGBO(150, 124, 85, 100),
+                                ), // Warna border hijau
                               ),
                             ),
                             child: Text(
-                              'Create an account',
+                              'Daftar',
                               style: TextStyle(
                                 fontFamily: 'Inter',
                                 fontSize: 18.0,
-                                color: Color(
-                                    0xFF6C806A), // Warna teks hijau sesuai gambar
+                                color: Color.fromRGBO(150, 124, 85,
+                                    100), // Warna teks hijau sesuai gambar
                               ),
                             ),
                           ),

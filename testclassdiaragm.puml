@@ -1,0 +1,141 @@
+@startuml
+set namespaceSeparator ::
+
+class "salmanitb::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "salmanitb::main.dart::MyApp"
+
+class "salmanitb::pages::informasi_page.dart::InformasiPage" {
+  +State<InformasiPage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "salmanitb::pages::informasi_page.dart::InformasiPage"
+
+class "salmanitb::pages::informasi_page.dart::_InformasiPageState" {
+  +String? dropdownValue1
+  +String? dropdownValue2
+  +String? dropdownValue3
+  +String? dropdownValue4
+  +List<Map<String, dynamic>> programOptions
+  +List<Map<String, dynamic>> bidangOptions
+  +List<String> filteredProgramOptions
+  +String jumlahRealisasi
+  +String totalNilaiSatuan
+  +List<Map<String, dynamic>> programKegiatanDetails
+  +Map<String, bool> isCardVisible
+  +List<String> months
+  +List<String> years
+  +String saldo
+  +void initState()
+  +dynamic fetchProgramOptions()
+  +dynamic fetchBidangOptions()
+  +void filterProgramOptions()
+  +dynamic fetchLaporanData()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "salmanitb::pages::informasi_page.dart::_InformasiPageState"
+
+class "salmanitb::pages::landing_page.dart::LandingPage" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "salmanitb::pages::landing_page.dart::LandingPage"
+
+class "salmanitb::pages::login_page.dart::LoginPage" {
+  +_LoginPageState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "salmanitb::pages::login_page.dart::LoginPage"
+
+class "salmanitb::pages::login_page.dart::_LoginPageState" {
+  -TextEditingController _emailController
+  -TextEditingController _passwordController
+  -bool _rememberMe
+  -dynamic _login()
+  -void _showError()
+  +Widget build()
+}
+
+"salmanitb::pages::login_page.dart::_LoginPageState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "salmanitb::pages::login_page.dart::_LoginPageState"
+
+class "salmanitb::pages::register_page.dart::RegisterPage" {
+  +_RegisterPageState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "salmanitb::pages::register_page.dart::RegisterPage"
+
+class "salmanitb::pages::register_page.dart::_RegisterPageState" {
+  -TextEditingController _nameController
+  -TextEditingController _emailController
+  -TextEditingController _passwordController
+  -TextEditingController _confirmPasswordController
+  -dynamic _register()
+  -void _showError()
+  +Widget build()
+}
+
+"salmanitb::pages::register_page.dart::_RegisterPageState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "salmanitb::pages::register_page.dart::_RegisterPageState"
+
+class "salmanitb::pages::splash_screen.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "salmanitb::pages::splash_screen.dart::MyApp"
+
+class "salmanitb::pages::splash_screen.dart::SplashScreen" {
+  +_SplashScreenState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "salmanitb::pages::splash_screen.dart::SplashScreen"
+
+class "salmanitb::pages::splash_screen.dart::_SplashScreenState" {
+  +void initState()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "salmanitb::pages::splash_screen.dart::_SplashScreenState"
+
+class "salmanitb::pages::splash_screen.dart::LandingPage" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "salmanitb::pages::splash_screen.dart::LandingPage"
+
+class "salmanitb::pages::test.dart::InformasiPage" {
+  +State<InformasiPage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "salmanitb::pages::test.dart::InformasiPage"
+
+class "salmanitb::pages::test.dart::_InformasiPageState" {
+  +String? dropdownValue1
+  +String? dropdownValue2
+  +String? dropdownValue3
+  +String? dropdownValue4
+  +List<Map<String, dynamic>> programOptions
+  +List<Map<String, dynamic>> bidangOptions
+  +List<String> filteredProgramOptions
+  +String jumlahRealisasi
+  +String totalNilaiSatuan
+  +List<String> programKegiatanNames
+  +List<Map<String, dynamic>> pelaksanaanKegiatan
+  +List<String> months
+  +List<String> years
+  +String saldo
+  +void initState()
+  +dynamic fetchProgramOptions()
+  +dynamic fetchBidangOptions()
+  +void filterProgramOptions()
+  +dynamic fetchLaporanData()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "salmanitb::pages::test.dart::_InformasiPageState"
+
+
+@enduml
